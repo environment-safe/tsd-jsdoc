@@ -1,10 +1,12 @@
 # tsd-jsdoc
 
-This library's goal is to be able to take as input a JSDoc annotated source JavaScript
+This a a fork of [`tsd-jsdoc`](https://www.npmjs.com/package/tsd-jsdoc), in order to support modern dependencies and mitigate potential security issues. This library's goal is to be able to take as input a JSDoc annotated source JavaScript
 file (or many files) and output a single TypeScript Declaration File (.d.ts).
 
-It is distributed as a JSDoc3 template. Running JSDoc with this as the template should
+It is distributed as a JSDoc4 template. Running JSDoc with this as the template should
 result in a TypeScript Definition File.
+
+If you need to support JSDoc3 please use the [parent project](https://www.npmjs.com/package/tsd-jsdoc).
 
 ## Installation
 

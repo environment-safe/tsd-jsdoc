@@ -3,11 +3,14 @@
   "version": "2.5.0",
   "description": "Compiles JSDoc annotated javascript into a Typescript Declaration File (.d.ts).",
   "main": "dist/publish.js",
-  "author": "Chad Engler <chad@pantherdev.com>",
+  "author": "Abbey Hawk Sparrow <khrome>(http://abbeyhawksparrow.com)",
+  "contributors":[
+    "Chad Engler <chad@pantherdev.com>"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:englercj/jsdoc2tsd.git"
+    "url": "git@github.com:environment-safe/tsd-jsdoc.git"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
