@@ -1,5 +1,5 @@
 {
-  "name": "tsd-jsdoc",
+  "name": "@environment-safe/tsd-jsdoc",
   "version": "2.5.0",
   "description": "Compiles JSDoc annotated javascript into a Typescript Declaration File (.d.ts).",
   "main": "dist/publish.js",
@@ -22,18 +22,20 @@
   ],
   "devDependencies": {
     "@types/chai": "^4.1.7",
+    "@types/diff": "^5.0.3",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.12",
     "chai": "^4.2.0",
-    "jsdoc": "^3.6.3",
-    "jsdoc-api": "^5.0.3",
-    "mocha": "^5.2.0",
+    "diff": "^5.1.0",
+    "jsdoc": "^4.0.2",
+    "jsdoc-api": "^8.0.0",
+    "mocha": "^10.2.0",
     "object-to-spawn-args": "^2.0.0",
     "ts-node": "^7.0.1",
     "walk-back": "^3.0.1"
   },
   "peerDependencies": {
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^4.0.2"
   },
   "dependencies": {
     "typescript": "^3.2.1"

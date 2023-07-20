@@ -52,6 +52,7 @@ export function publish(data: TDocletDb, opts: ITemplateConfig)
         // The Emitter._markExported() function will make the appropriate selection later.
 
         // Disclaimer for an experimental feature.
+        //the following was breaking tests
         warn(`Note: The 'exported' generation strategy is still an experimental feature for the moment, thank you for your comprehension. `
             + `Feel free to contribute in case you find a bug.`);
     }

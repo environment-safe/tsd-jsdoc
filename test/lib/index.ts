@@ -9,6 +9,10 @@ import { expect } from 'chai';
 import walkBack from 'walk-back';
 import { JsdocApi } from './jsdoc-api';
 import { renderSync } from './render';
+import { diffChars } from 'diff';
+import Mocha from 'mocha';
+
+const before = Mocha.before;
 
 // jsdoc-api may actually work with a jsdoc instance installed in its own `node_modules` subdirectory.
 // Use the same kind of 'walk-back' call as jsdoc-api does in order to find the jsdoc instance actually used.
@@ -99,6 +103,9 @@ function expectJsDoc(fileName: string, generationStrategy: 'documented' | 'expor
     // Check result.
     const expectPath = path.join(EXPECT_DIR, `${fileName}.d.ts`);
     const expectStr = fs.readFileSync(expectPath, 'utf8');
+    if(destStr.trim() !== expectStr.trim()){
+        console.log(diffChars(destStr, expectStr));
+    }
     expect(destStr.trim()).to.equal(expectStr.trim());
 }
 
