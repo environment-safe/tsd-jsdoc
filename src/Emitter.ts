@@ -874,7 +874,6 @@ export class Emitter
         if (obj.doclet.memberof)
         {
             const parent = this._treeNodes[obj.doclet.memberof];
-
             if (!parent)
             {
                 warn(`Failed to find parent of doclet '${obj.doclet.longname}' using memberof '${obj.doclet.memberof}', this is likely due to invalid JSDoc.`, obj.doclet);
@@ -925,8 +924,11 @@ export class Emitter
             // The searched item has the same longname as a mdoule.
             // This happens when the item is an inline or lambda class exported by default.
             // Look for the item in the module's children.
-            for (const child of node.children)
+            let seen = [];
+            console.trace();
+            for (const child of node.children.concat(node))
             {
+                seen.push(child.doclet.longname);
                 if (child.doclet.longname === longname && filter(child))
                 {
                     _debug(`Emitter._getNodeFromLongname('${longname}') => ${docletDebugInfo(child.doclet)}`);

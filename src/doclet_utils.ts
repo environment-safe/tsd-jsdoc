@@ -36,7 +36,8 @@ export function hasParamsDoclet(doclet: TDoclet): boolean
 
 export function isClassDoclet(doclet: TDoclet): doclet is IClassDoclet
 {
-    return doclet.kind === 'class' || doclet.kind === 'interface' || doclet.kind === 'mixin';
+    const result = doclet.kind === 'class' || doclet.kind === 'interface' || doclet.kind === 'mixin';
+    return result;
 }
 
 export function isClassDeclarationDoclet(doclet: TDoclet): boolean
